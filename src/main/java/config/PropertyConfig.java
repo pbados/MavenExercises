@@ -9,8 +9,6 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @Configuration
 @PropertySource("application.properties")
 public class PropertyConfig {
-//    @Value("${application.version}")
-//    private String version;
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer(){
