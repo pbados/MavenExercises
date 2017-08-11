@@ -37,7 +37,7 @@
         <profile>
             <id>dev</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <webXmlPath>src/main/config/development/WEB-INF/web.xml</webXmlPath>
