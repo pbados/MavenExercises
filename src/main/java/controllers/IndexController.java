@@ -3,8 +3,8 @@ package controllers;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import pl.external.MyClass;
 
 @Controller
 public class IndexController {
@@ -21,7 +21,6 @@ public class IndexController {
     @Value("${application.myFilteredProperty}")
     private String myFilteredProperty;
 
-
     @RequestMapping("/")
     public String index(Model model){
         model.addAttribute("version",version);
@@ -30,6 +29,7 @@ public class IndexController {
         model.addAttribute("java_home",java_home);
         model.addAttribute("spring_version",spring_version);
         model.addAttribute("myFilteredProperty",myFilteredProperty);
+        model.addAttribute("myStaticMethodOutput", pl.external.MyClass.myStaticMethodOutput());
         return "index";
     }
 }

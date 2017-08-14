@@ -24,7 +24,7 @@
                 <build.profile.id>test</build.profile.id>
             </properties>
         </profile>
-        <!--<profile>-->
+        <!--<profile> scopy, import scope, roznica provied od compile gdzie sa kliki settings.xml, classifier ,_rozne wersje w tej samej dependency, kolejnosc wysz. repozytoriow, compiler plugin, cykl zycia app, mvn clean install<- wszystko co w cyklu do install/to smao z package, alfabetarcfinalea 1gl aktualizacja, 2, 3bugi, -->
             <!--<id>default</id>-->
             <!--<activation>-->
                 <!--<activeByDefault>false</activeByDefault>-->
@@ -77,6 +77,13 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <dependency>
+            <groupId>pl.external</groupId>
+            <artifactId>MyClass</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>C:/Users/pbados/Desktop/v3/zadanie/src/main/webapp/WEB-INF/lib/MyClass.jar</systemPath>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -90,6 +97,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
+                    <packagingIncludes>WEB-INF/lib/*.lib</packagingIncludes>
                     <filters>
                         <filter>src/main/filters/filter.properties</filter>
                     </filters>
