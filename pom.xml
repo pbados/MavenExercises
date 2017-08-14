@@ -77,13 +77,13 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <dependency>
-            <groupId>pl.external</groupId>
-            <artifactId>MyClass</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>C:/Users/pbados/Desktop/v3/zadanie/src/main/webapp/WEB-INF/lib/MyClass.jar</systemPath>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>pl.external</groupId>-->
+            <!--<artifactId>MyClass</artifactId>-->
+            <!--<version>1.0</version>-->
+            <!--<scope>system</scope>-->
+            <!--<systemPath>C:/Users/pbados/Desktop/v3/zadanie/src/main/webapp/WEB-INF/lib/MyClass.jar</systemPath>-->
+        <!--</dependency>-->
     </dependencies>
     <build>
         <plugins>
@@ -97,7 +97,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
-                    <packagingIncludes>WEB-INF/lib/*.lib</packagingIncludes>
+                    <!--<packagingIncludes>WEB-INF/lib/*.lib</packagingIncludes>-->
                     <filters>
                         <filter>src/main/filters/filter.properties</filter>
                     </filters>
