@@ -29,7 +29,7 @@ public class IndexController {
         model.addAttribute("java_home",java_home);
         model.addAttribute("spring_version",spring_version);
         model.addAttribute("myFilteredProperty",myFilteredProperty);
-        model.addAttribute("myStaticMethodOutput", pl.external.MyClass.myStaticMethodOutput());
+        model.addAttribute("myStaticMethodOutput", MyClass.myStaticMethodOutput());
         return "index";
     }
 }
