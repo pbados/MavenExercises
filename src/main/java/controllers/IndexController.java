@@ -20,6 +20,8 @@ public class IndexController {
     private String spring_version;
     @Value("${application.myFilteredProperty}")
     private String myFilteredProperty;
+    @Value("${variableFromSettings}")
+    private String variableFromSettings;
 
     @RequestMapping("/")
     public String index(Model model){
@@ -30,6 +32,7 @@ public class IndexController {
         model.addAttribute("spring_version",spring_version);
         model.addAttribute("myFilteredProperty",myFilteredProperty);
         model.addAttribute("myStaticMethodOutput", pl.external.MyClass.myStaticMethodOutput());
+        model.addAttribute("variableFromSettings", variableFromSettings);
         return "index";
     }
 }
