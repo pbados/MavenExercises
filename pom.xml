@@ -13,6 +13,7 @@
         <webXmlPath>src/main/config/default/WEB-INF/web.xml</webXmlPath>
         <build.profile.id>default</build.profile.id>
     </properties>
+
     <profiles>
         <profile>
             <id>test</id>
@@ -114,7 +115,13 @@
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/zadanie</path>
+                </configuration>
             </plugin>
         </plugins>
+        <finalName>zadanie</finalName>
     </build>
 </project>
